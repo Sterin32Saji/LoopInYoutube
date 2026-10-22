@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Loop In YouTube",
+  "version": "1.2.0",
+  "description": "Loop YouTube videos or choose a section to repeat—great for songs, language practice, and more.",
+  "icons": {
+    "16": "store-assets/icons/icon16.png",
+    "48": "store-assets/icons/icon48.png",
+    "128": "store-assets/icons/icon128.png"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "Loop In YouTube",
+    "default_icon": {
+      "16": "store-assets/icons/icon16.png",
+      "48": "store-assets/icons/icon48.png"
+    },
+    "default_popup": "popup.html"
+  }
+}

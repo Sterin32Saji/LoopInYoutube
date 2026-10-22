@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Loop In YouTube</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="panel">
+      <header class="brand-row">
+        <img class="brand-icon" src="store-assets/icons/icon48.png" alt="">
+        <div><h1>Loop In YouTube</h1><p class="subtitle">Keep the good part going</p></div>
+      </header>
+
+      <nav class="mode-tabs" aria-label="Loop mode">
+        <button class="mode-tab" data-mode="video" type="button">Whole video</button>
+        <button class="mode-tab" data-mode="sections" type="button">Sections <span id="section-count" class="count">0</span></button>
+      </nav>
+
+      <section class="mode-card">
+        <div class="mode-copy"><strong id="mode-title">Whole video</strong><p id="mode-description">Start the video again whenever it finishes.</p></div>
+        <button id="toggle" class="toggle" type="button" role="switch" aria-checked="false" aria-label="Turn looping on or off" disabled>
+          <span class="switch" aria-hidden="true"><span></span></span>
+        </button>
+      </section>
+
+      <section id="section-tools" class="section-tools" hidden>
+        <div class="section-heading">
+          <div><h2>Loop sections</h2><p>Set a start and end, then add more parts.</p></div>
+          <span class="loop-mark" aria-hidden="true">A↔B</span>
+        </div>
+
+        <div class="range-fields">
+          <label>Start
+            <span class="time-entry"><input id="start-time" inputmode="numeric" placeholder="0:00" aria-label="Section start time"><button id="mark-start" type="button" title="Use current playback position" aria-label="Set start to current position">Set</button></span>
+          </label>
+          <span class="range-dash" aria-hidden="true">—</span>
+          <label>End
+            <span class="time-entry"><input id="end-time" inputmode="numeric" placeholder="0:00" aria-label="Section end time"><button id="mark-end" type="button" title="Use current playback position" aria-label="Set end to current position">Set</button></span>
+          </label>
+        </div>
+        <button id="add-section" class="add-button" type="button">＋ <span>Add section</span></button>
+        <p id="section-message" class="section-message" role="status" aria-live="polite"></p>
+        <div id="section-list" class="section-list"></div>
+      </section>
+
+      <p id="status" class="status" role="status" aria-live="polite">Looking for a video…</p>
+      <p class="hint">Your loop settings stay in this tab until you navigate away.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
